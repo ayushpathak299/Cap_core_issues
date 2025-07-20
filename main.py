@@ -12,15 +12,15 @@ now = datetime.now(timezone.utc).isoformat()
 load_dotenv()
 
 # === Jira Config ===
-JIRA_URL = os.getenv("JIRA_URL")
-JIRA_USERNAME = os.getenv("JIRA_USERNAME")
-JIRA_API_TOKEN = os.getenv("JIRA_API_TOKEN")
+JIRA_URL = os.getenv('JIRA_URL')
+JIRA_USERNAME = os.getenv('JIRA_USERNAME')
+JIRA_API_TOKEN = os.getenv('JIRA_API_TOKEN')
 
 # === PostgreSQL Config ===
-DB_HOST = os.getenv("DB_HOST")
-DB_NAME = os.getenv("DB_NAME")
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv('DB_HOST')
+DB_NAME = os.getenv('DB_NAME')
+DB_USER = os.getenv('DB_USER')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
 
 
 # === DB Connection ===
