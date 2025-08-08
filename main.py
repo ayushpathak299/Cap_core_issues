@@ -89,7 +89,10 @@ def fetch_issues(jql_query):
             break
 
         issues = response.json().get("issues", [])
+        print(f"Total issues fetched: {len(all_issues)}")
+
         if not issues:
+            print("no issues")
             break
 
         all_issues.extend(issues)
@@ -158,8 +161,9 @@ def main():
     jql = f"project = CAP AND labels = optumcoreplatformissue"
     if last_run:
         jql += f" AND updated >= '{last_run.strftime('%Y-%m-%d %H:%M')}'"
+        print(jql)
     else:
-        jql = f"project = CAP AND labels = optumcoreplatformissue and created >= '2025-02-01'"
+        jql = f"project = CAP AND labels = optumcoreplatformissue and updated >= '2025-02-01'"
 
     issues = fetch_issues(jql)
 
